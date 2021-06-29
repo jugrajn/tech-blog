@@ -21,6 +21,7 @@ Comment.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allownull: false,
             references: {
                 model: 'user',
                 key: 'id',
@@ -28,7 +29,8 @@ Comment.init(
         },
         post_id: {
             type: DataTypes.INTEGER,
-            referencews: {
+            allownull: false,
+            references: {
                 model: 'post',
                 key: 'id',
             },
