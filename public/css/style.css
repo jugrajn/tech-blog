@@ -1,0 +1,20 @@
+* {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    letter-spacing: 1px;
+    margin-inline: 1em
+}
+
+a:hover {
+    text-shadow: 1px 1px #fff;
+}
+
+#navbar-container {
+    background-image: linear-gradient(to bottom right, rgb(23, 25, 27), rgb(201, 217, 231));
+}
+
