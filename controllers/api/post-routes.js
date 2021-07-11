@@ -11,7 +11,6 @@ router.post('/', withAuth, async (req, res) => {
         })
         res.status(200).json(postData);
     }
-    
     catch (err) {
         res.status(400).json(err)
     }
@@ -28,13 +27,27 @@ router.put('/:id', withAuth, async (req, res) => {
         
         // Make sure ID IS VALID OR EXISTS
         if (!postData) {
-            res.status(404).jsono({ message: 'No post found with this ID' });
+            res.status(404).json({ message: 'No post found with this ID' });
             return
         }
         res.status(200).json(postData);
     }
-
     catch (err) {
         res.status(400).json(err)
     }
 })
+
+//CREATE ROUTE FOR DELETE
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.destroy({
+            where: { id: req.params.id }
+        });
+        res.status(200).json(postData);
+    }
+    catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+module.exports = router;
