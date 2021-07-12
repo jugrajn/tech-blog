@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { json } = require('sequelize/types');
 const {Post, Comment, User} = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -23,7 +22,7 @@ router.get('/', async (req, res) => {
 
 
 //CREATE ROUTE FOR DASHBOARD PAGE
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const dashData = await Post.findAll({
             where: { user_id: req.session.user_id},
@@ -55,7 +54,7 @@ router.get('/login', async (req, res) => {
 
 //CREATE ROUTE FOR createpost
 
-router.get('/createpost', async (req, res) => {
+router.get('/createpost', withAuth, async (req, res) => {
     try {
         res.render('createpost', {
             loggedIn: req.session.loggedIn
@@ -68,7 +67,7 @@ router.get('/createpost', async (req, res) => {
 });
 
 // WORK IN PROGRESS
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const postedData = await Post.findByPk(req.params.id, {
             include: [{ model: User}, { model: Comment, include: User}]
