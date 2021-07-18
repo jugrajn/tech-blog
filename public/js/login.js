@@ -1,5 +1,5 @@
 const loginFormHandler = async (event) => {
-    event.preventDe3fault();
+    event.preventDefault();
 
     //CAPTURE VALUES FROM LOGIN FORM
     const username = document.querySelector('#username-login').value.trim()
@@ -45,9 +45,9 @@ const signupFOrmHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-form')
+  .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
