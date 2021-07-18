@@ -7,13 +7,13 @@ const loginFormHandler = async (event) => {
 
     if (username && password) {
         // SEND A POST REQUEST TO API ENDPOINT
-        const response = await fetch('/api/user/login', {
+        const response = await fetch('/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
-        if (respponse.ok) {
+        if (response.ok) {
             document.location.replace('/');
         }
         else {
@@ -22,7 +22,7 @@ const loginFormHandler = async (event) => {
     }
 };
 
-const signupFOrmHandler = async (event) => {
+const signupFormHandler = async (event) => {
     event.preventDefault();
 
     const username = document.querySelector('#username-signup').value.trim();

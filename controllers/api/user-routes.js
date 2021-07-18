@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const User = require('../../models');
+const {User} = require('../../models');
 
 // ROUTE FOR NEW USER
 router.post('/', async (req,res) => {
+  
     try {
         const userData = await User.create(req.body);
 
@@ -19,9 +20,10 @@ router.post('/', async (req,res) => {
 
 // ROUTE FOR USER LOGIN
 router.post('/login', async (req, res) => {
+    console.log(req.body)
     try {
         const userData = await User.findOne({ where: { username: req.body.username }});
-        
+        console.log(userData)
         if (!userData) {
             res.status(400).json({ message: 'Incorrect username or password, please try again'});
             return;
