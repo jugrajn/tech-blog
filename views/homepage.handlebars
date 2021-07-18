@@ -1,19 +1,13 @@
     <section class='container'>
-        
+        {{#each posts as |post|}}
         <div class='row'>
             <div class='post-flex-item card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em'>
-                <p style='font-weight: bolder; font-size: 1.5em;' class='card-header'>Post Title</p>
-                <p class="card-body">The flex-wrap property is a sub-property of the Flexible Box Layout module.
-    
-                    It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.
-                    
-                    Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
-                    
-                    The flex-wrap property accepts 3 different val</p>
-                <p style='font-style: italic; font-weight: bold;'>posted by user and when</p>
+                <a href='/{{post.id}}'><p style='font-weight: bolder; font-size: 1.5em;' class='card-header' id='{{post.id}}'>{{post.title}}</p></a>
+                <p class="card-body">{{post.content}}</p>
+                <p style='font-style: italic;'>Posted by<span style='font-weight: bold'>{{user.username}}</span></p>
             </div>
         </div>
-        
+        {{/each}}
         <div class='row'>
             <div class='col-md-s2'>
                 <button type="button" class="btn btn-primary">Add Post</button>

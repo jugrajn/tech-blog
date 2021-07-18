@@ -4,17 +4,18 @@
   </div>
 
   <div class='row justify-content-center' style='padding-top: 5em;'>
-    <form class="card text-white bg-secondary mb-3 col-md-s2" style='padding-inline:1em; padding-bottom: 3em;'>
+    <form class="card text-white bg-secondary mb-3 col-md-s2 edit-btn" id='{{data.id}}' style='padding-inline:1em; padding-bottom: 3em;'>
       <div class='form-group'>
         <h4>Title</h4>
-        <textarea class="form-control-lg" cols="35"></textarea>
+        <textarea class="form-control-lg" id='edit-post-title' cols="35"></textarea>
       </div>
       <div class='form-group'>
         <h4>Content</h4>
-        <textarea class="form-control-lg" cols="35" rows="9" style="padding-bottom: 10em;"></textarea>
+        <textarea class="form-control-lg" id='edit-post-content' cols="35" rows="9" style="padding-bottom: 10em;"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Save</button>
-      <button type="submit" class="btn btn-info">Delete</button>
+      <button type="submit" class="btn btn-info delete-button">Delete</button>
     </form>
   </div>
 </section>
+<script src='/public/js/edit.js'></script>
