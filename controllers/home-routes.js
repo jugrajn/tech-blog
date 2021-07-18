@@ -69,14 +69,38 @@ router.get('/createpost', withAuth, async (req, res) => {
 // WORK IN PROGRESS
 router.get('/:id', withAuth, async (req, res) => {
     try {
-        const postedData = await Post.findByPk(req.params.id, {
+        const commentData = await Post.findByPk(req.params.id, {
             include: [{ model: User}, { model: Comment, include: User}]
         });
 
-        const post = postedData.get({ plain: true })
+        const post = commentData.get({ plain: true })
+        // RENDER PAGE WITH ADD COMMENT DATA USING APPROPRIATE HANDLEBAR PAGE
+        res
+            .status(200)
+            .render('add-comment', {
+                post,
+                loggedIn: req.session.loggedIn,
+            });
+    }
+    catch (err) {
+        res.status(500).json(err)
+    }
+});
+
+router.get('/post/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id);
+        const data  = postData.get({ plain: true });
+
+        res
+            .status(200)
+            .render('editpost', {
+                data,
+                loggedIn: req.session.loggedIn
+            });
     }
 
     catch (err) {
         res.status(500).json(err)
     }
-})
+});
