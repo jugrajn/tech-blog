@@ -1,0 +1,17 @@
+[
+    {
+        "title": "React",
+        "content": "I've heard react makes things so much easier with modularization",
+        "user_id": "1"
+    },
+    {
+        "title": "Boostrap",
+        "content": "Using Boostrap saved me so much time with grids or flexbox",
+        "user_id": "2"
+    },
+    {
+        "title": "Javascript",
+        "content": "I wonder if there is any javascript logic that teaches artificial intelligence.",
+        "user_id": "3"
+    }
+]

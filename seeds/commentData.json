@@ -1,0 +1,19 @@
+  
+[
+    {
+        "content": "It definitely does. The divided parts are called components and are reusable.",
+        "user_id": "2",
+        "post_id": "1"
+
+    },
+    {
+        "content": "I agree Ben. Positioning and box model has been the most difficult with just plain CSS, Boostrap makes it more efficient.",
+        "user_id": "3",
+        "post_id": "2"
+    },
+    {
+        "content": "Yes you can; Tensorflow.js is a javascript library that teaches machine learning.",
+        "user_id": "2",
+        "post_id": "3"
+    }
+]
