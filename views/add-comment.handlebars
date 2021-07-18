@@ -10,7 +10,7 @@
         <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em'>
           <p style='font-weight: bolder; font-size: 1.5em;' class='card-header title' id='{{post.id}}'>{{post.title}}</p>
           <p class="card-body">{{post.content}}</p>
-          <p style='font-style: italic;'>Posted by<span style='font-weight:bold'>{{user.username}}</span></p>
+          <p style='font-style: italic;'>Posted by<span style='font-weight:bold'>{{user.username}} on {{timestamps}}</span></p>
         </div>
       </div>
     </article>
@@ -24,7 +24,7 @@
       {{#each post.comment}}
       <div class='comment card bg-light mb-3' style='padding-inline:1em; padding-bottom: 0.25em; width: 40em'>
         <p class='' style='font-size: large;'>{{comment.content}}</p>
-        <p style='font-style: italic;'>Comment by <span style='font-weight: 500;'>{{user.username}} -July 17 2021</span></p>
+        <p style='font-style: italic;'>Comment by <span style='font-weight: 500;'>{{user.username}} on {{timestamps}}</span></p>
       </div>
       {{/each}}
       <form class='comment-body'>

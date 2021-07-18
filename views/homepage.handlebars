@@ -4,7 +4,7 @@
             <div class='post-flex-item card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em'>
                 <a href='/{{post.id}}'><p style='font-weight: bolder; font-size: 1.5em;' class='card-header' id='{{post.id}}'>{{post.title}}</p></a>
                 <p class="card-body">{{post.content}}</p>
-                <p style='font-style: italic;'>Posted by<span style='font-weight: bold'>{{user.username}}</span></p>
+                <p style='font-style: italic;'>Posted by<span style='font-weight: bold'>{{user.username}} on {{timestamps}}</span></p>
             </div>
         </div>
         {{/each}}
