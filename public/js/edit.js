@@ -21,7 +21,7 @@ const deletePostFormHandler = async (event) => {
     event.preventDefault();
     const postid= document.querySelector('.edit-btn').getAttribute('id');
 
-    const postRes = await fetch(`/api/post/${postid}`, {
+    const postRes = await fetch(`/api/posts/${postid}`, {
         method: 'DELETE',
         body: JSON.stringify({ postid }),
         headers: { 'Content-Type': 'application/json' },
