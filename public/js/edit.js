@@ -6,14 +6,14 @@ const editPostFormHandler = async (event) => {
     const postContent = document.querySelector('#edit-post-content').value.trim();
     const postid = document.querySelector('.edit-btn').getAttribute('id');
 
-    const response = await fetch(`/api/post${postid}`, {
+    const response = await fetch(`/api/posts/${postid}`, {
         method: 'PUT',
         body: JSON.stringify({ postTitle, postContent }),
         headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-        document.location.reaplace('/dashboard');
+        document.location.replace('/dashboard');
     }
 }
 
@@ -28,9 +28,9 @@ const deletePostFormHandler = async (event) => {
     });
     
     if (postRes.ok) {
-        document.location.reaplace('/dashboard');
+        document.location.replace('/dashboard');
     }
 };
 
-document.querySelector('.edt-btn').addEventListener('submit', editPostFormHandler);
+document.querySelector('.edit-btn').addEventListener('submit', editPostFormHandler);
 document.querySelector('.delete-button').addEventListener('click', deletePostFormHandler);

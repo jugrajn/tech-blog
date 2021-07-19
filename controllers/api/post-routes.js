@@ -20,11 +20,11 @@ router.post('/', withAuth, async (req, res) => {
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.update({
-            title: req.body.title,
-            content: req.body.content
+            title: req.body.postTitle,
+            content: req.body.postContent
         },
         { where: { id: req.params.id }});
-        
+        console.log(req.body)
         // Make sure ID IS VALID OR EXISTS
         if (!postData) {
             res.status(404).json({ message: 'No post found with this ID' });
