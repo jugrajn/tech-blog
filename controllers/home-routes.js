@@ -66,7 +66,7 @@ router.get('/createpost', withAuth, async (req, res) => {
     }
 });
 
-// WORK IN PROGRESS
+
 router.get('/:id', withAuth, async (req, res) => {
     try {
         const commentData = await Post.findByPk(req.params.id, {

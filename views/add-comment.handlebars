@@ -21,9 +21,9 @@
     <article class='comments'>
       <h3 style='text-align: center;'>Comments:</h3>
       {{!-- >>>>>>>>>>>>>>>>> FOR EACH PARTIAL <<<<<<<<<<<<<<<<<<< --}}
-      {{#each post.comment}}
+      {{#each post.comments}}
       <div class='comment card bg-light mb-3' style='padding-inline:1em; padding-bottom: 0.25em; width: 40em'>
-        <p class='' style='font-size: large;'>{{comment.content}}</p>
+        <p class='' style='font-size: large;'>{{content}}</p>
         <p style='font-style: italic;'>Comment by <span style='font-weight: 500;'>{{user.username}} on {{timestamps}}</span></p>
       </div>
       {{/each}}

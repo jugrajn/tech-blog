@@ -2,16 +2,16 @@
 
 const addCommentFormHandler = async event => {
     event.preventDefault();
-    const commentContent = document.querySelector('#comm-content').value.trim();
-    const postid = document.querySelector('.title').value.trim();
+    const content = document.querySelector('#comm-content').value.trim();
+    const post_id = document.querySelector('.title').getAttribute('id');
 
-    const postRes = await fetch('/api/comment', {
+    const response = await fetch('/api/comments', {
         method: 'POST',
-        body: JSON.stringify({ commentContent, postid }),
+        body: JSON.stringify({ content, post_id }),
         headers: { 'Content-Type': 'application/json' },
     });
 
-    if (postRes.ok) {
+    if (response.ok) {
         document.location.reload();
     }
 };

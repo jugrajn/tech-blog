@@ -15,19 +15,19 @@
     <nav>
         <a href='/'>Home</a>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
         <a href='/dashboard'>Dashboard</a>
-        <button class="no-button" id="logout">logout</button>
+        {{#if loggedIn}}
+        <button id='logoutbtn'>Logout</button>
         {{else}}
         <a href='/login'>Login</a>
         {{/if}}
         
     </nav>
 </header>
-<body>
-{{{ body }}}
-</body>
 
+<main>
+{{{ body }}}
+</main>
 
 {{#if loggedIn}}
 <script type="text/javascript" src='js/logout.js'></script>
