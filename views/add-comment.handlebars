@@ -7,10 +7,10 @@
   <div class='row justify-content-around'>
     <article class='col-6'>
       <div class='row'>
-        <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em'>
+        <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em;  background-image: linear-gradient(to bottom right, rgb(23, 25, 27), rgb(201, 217, 231));'>
           <p style='font-weight: bolder; font-size: 1.5em;' class='card-header title' id='{{post.id}}'>{{post.title}}</p>
           <p class="card-body">{{post.content}}</p>
-          <p style='font-style: italic;'>Posted by<span style='font-weight:bold'>{{user.username}} on {{timestamps}}</span></p>
+          <p style='font-style: italic;'>Posted by<span style='font-weight:bold'> {{post.user.username}} on {{post.timestamps}}</span></p>
         </div>
       </div>
     </article>

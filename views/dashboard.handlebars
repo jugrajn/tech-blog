@@ -9,8 +9,8 @@
   <div class='row justify-content-around'>
     <article class='col-6'>
       <div class='row'>
-        <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em'>
-          <a href='/post/{{post.id}}'><p style='font-weight: bolder; font-size: 1.5em;' class='card-header'>{{post.title}}</p></a>
+        <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em;  background-image: linear-gradient(to bottom right, rgb(23, 25, 27), rgb(201, 217, 231));'>
+          <a href='/post/{{post.id}}'><p style='font-weight: bolder; font-size: 1.5em; width: 10em;' class='card-header'>{{post.title}}</p></a>
           <p class="card-body">{{post.content}}</p>
           <p style='font-style: italic;'>Posted on <span style='font-weight: bold'>{{timestamps}}</span></p>
         </div>
@@ -18,5 +18,5 @@
     </article>
   </div>
   {{/each}}
-  <a href='/createpost'><button type="button" class="btn btn-primary">Add Post</button></a>
+  <a href='/createpost' class='row justify-content-center'><button type="button" class="btn btn-primary">Add Post</button></a>
 </section>

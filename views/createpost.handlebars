@@ -5,16 +5,16 @@
         <article class='col-6'>
         <h3 style='text-align: center; padding-top: 1em;'>Create Post</h3>
             <div class='row'>
-            <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em; width: 50em; height: 25em'>
+            <div class='card text-white bg-secondary mb-3 col-md-s2' style='margin-top: 2em; width: 50em; height: 30em'>
                 <form class='add-button'>
                     <div class="form-group">
-                        <label for="input-post-title" class='card-header' style='font-weight: bolder; font-size: 1.5em;'>Title</label>
-                        <input type="title" class="form-control" id="post-title">
+                        <label for="input-post-title" class='card-header' style='font-weight: bolder; font-size: 1.5em; width: 21em; background-image: linear-gradient(to bottom right, rgb(23, 25, 27), rgb(201, 217, 231));'>Title</label>
+                        <textarea type="title" class="form-control" cols="65" id="post-title"></textarea>
                         <large id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</large>
                     </div>
                     <div class="form-group">
-                        <label for="input-post-content" style='font-weight: bolder; font-size: 1.5em;'>Content</label>
-                        <input type='textarea' class="form-control card-body" id="post-content">
+                        <label for="input-post-content" class='card-header' style='font-weight: bolder; font-size: 1.5em; width: 21em; background-image: linear-gradient(to bottom right, rgb(23, 25, 27), rgb(201, 217, 231));'>Content</label>
+                        <textarea type='textarea' class="form-control card-body" rows='6.5' id="post-content"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Post!</button>
                 </form>    
