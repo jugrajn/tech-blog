@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3002;
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'process.env.JAWSDB || Super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
